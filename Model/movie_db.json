@@ -18,7 +18,8 @@
             "title": "Babylon A.D.",
             "video": false,
             "vote_average": 5.601,
-            "vote_count": 1906
+            "vote_count": 1906,
+            "price": 12.99
         },
         {
             "adult": false,
@@ -40,7 +41,8 @@
             "title": "Miraculous World: Paris, Tales of Shadybug and Claw Noir",
             "video": false,
             "vote_average": 6.935,
-            "vote_count": 62
+            "vote_count": 62,
+            "price": 15.99
         },
         {
             "adult": false,
@@ -59,7 +61,8 @@
             "title": "Five Nights at Freddy's",
             "video": false,
             "vote_average": 7.8,
-            "vote_count": 2619
+            "vote_count": 2619,
+            "price": 6.99
         },
         {
             "adult": false,
@@ -77,7 +80,8 @@
             "title": "Zero Fucks Given",
             "video": false,
             "vote_average": 6.417,
-            "vote_count": 306
+            "vote_count": 306,
+            "price": 12.00
         },
         {
             "adult": false,
@@ -96,7 +100,8 @@
             "title": "A",
             "video": false,
             "vote_average": 7.19,
-            "vote_count": 58
+            "vote_count": 58,
+            "price": 5.00
         },
         {
             "adult": false,
@@ -114,7 +119,8 @@
             "title": "A",
             "video": false,
             "vote_average": 6.189,
-            "vote_count": 53
+            "vote_count": 53,
+            "price": 16.00
         },
         {
             "adult": false,
@@ -133,7 +139,8 @@
             "title": "Last Night of Amore",
             "video": false,
             "vote_average": 7.22,
-            "vote_count": 296
+            "vote_count": 296,
+            "price": 18.00
         },
         {
             "adult": false,
@@ -153,7 +160,8 @@
             "title": "Anatomy of a Fall",
             "video": false,
             "vote_average": 7.83,
-            "vote_count": 358
+            "vote_count": 358,
+            "price": 6.97
         },
         {
             "adult": false,
@@ -172,7 +180,8 @@
             "title": "A Deadly Invitation",
             "video": false,
             "vote_average": 5.898,
-            "vote_count": 113
+            "vote_count": 113,
+            "price": 4.50
         },
         {
             "adult": false,
@@ -191,7 +200,8 @@
             "title": "Dragon Ball: Mystical Adventure",
             "video": false,
             "vote_average": 6.756,
-            "vote_count": 227
+            "vote_count": 227,
+            "price": 12.99
         },
         {
             "adult": false,
@@ -212,7 +222,8 @@
             "title": "Spider-Man: Across the Spider-Verse",
             "video": false,
             "vote_average": 8.4,
-            "vote_count": 5035
+            "vote_count": 5035,
+            "price": 14.25
         },
         {
             "adult": false,
@@ -232,7 +243,8 @@
             "title": "Race to the Summit",
             "video": false,
             "vote_average": 6.471,
-            "vote_count": 35
+            "vote_count": 35,
+            "price": 12.23
         },
         {
             "adult": false,
@@ -251,7 +263,8 @@
             "title": "A",
             "video": false,
             "vote_average": 6.256,
-            "vote_count": 39
+            "vote_count": 39,
+            "price": 11.92
         },
         {
             "adult": false,
@@ -271,7 +284,8 @@
             "title": "I Don't Expect Anyone to Believe Me",
             "video": false,
             "vote_average": 6.0,
-            "vote_count": 4
+            "vote_count": 4,
+            "price": 21.99
         },
         {
             "adult": false,
@@ -290,7 +304,8 @@
             "title": "Gunfight at Rio Bravo",
             "video": false,
             "vote_average": 4.3,
-            "vote_count": 15
+            "vote_count": 15,
+            "price": 18.99
         },
         {
             "adult": false,
@@ -310,7 +325,8 @@
             "title": "Mujib: The Making of a Nation",
             "video": false,
             "vote_average": 6.1,
-            "vote_count": 5
+            "vote_count": 5,
+            "price": 3.99
         },
         {
             "adult": false,
@@ -329,7 +345,8 @@
             "title": "Six Swedish Girls in Alps",
             "video": false,
             "vote_average": 5.897,
-            "vote_count": 39
+            "vote_count": 39,
+            "price": 7.99
         },
         {
             "adult": false,
@@ -349,7 +366,8 @@
             "title": "Avatar: The Way of Water",
             "video": false,
             "vote_average": 7.65,
-            "vote_count": 10266
+            "vote_count": 10266,
+            "price": 8.99
         },
         {
             "adult": false,
@@ -369,7 +387,8 @@
             "title": "Eagle and Jaguar, The Legendary Warriors",
             "video": false,
             "vote_average": 6.611,
-            "vote_count": 36
+            "vote_count": 36,
+            "price": 12.75
         },
         {
             "adult": false,
@@ -388,6 +407,7 @@
             "title": "After Everything",
             "video": false,
             "vote_average": 7.019,
-            "vote_count": 564
+            "vote_count": 564,
+            "price": 12.99
         }
     ]

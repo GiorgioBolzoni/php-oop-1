@@ -3,7 +3,7 @@
 class Product
 {
     protected float $price;
-    private int $sconto;
+    private int $sconto = 0;
     protected int $quantity;
 
     public function __construct($price, $quantity)

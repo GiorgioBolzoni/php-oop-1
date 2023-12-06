@@ -1,9 +1,9 @@
 <?php
 
 include __DIR__ . "/Genre.php";
-include __DIR__ . "/Product.php";
+// include __DIR__ . "/Product.php";
 
-class Movie extends Product
+class Movie
 {
     private int $id;
     private string $title;
@@ -12,17 +12,22 @@ class Movie extends Product
     private string $poster_path;
     private string $original_language;
     private array $genres;
+    private int $quantity;
+    public array $sconto;
+    private float $price;
 
-    public function __construct($id, $title, $overview, $vote_average, $poster_path, $original_language, $genres, $quantity, $price)
+    function __construct($id, $title, $overview, $vote, $image, $language, $genres, $quantity, $price)
     {
-        parent::__construct($price, $quantity);
         $this->id = $id;
         $this->title = $title;
         $this->overview = $overview;
-        $this->vote_average = $vote_average;
-        $this->poster_path = $poster_path;
-        $this->original_language = $original_language;
+        $this->vote_average = $vote;
+        $this->poster_path = $image;
+        $this->original_language = $language;
         $this->genres = $genres;
+        $this->quantity = $quantity;
+        $this->price = $price;
+
     }
 
     private function getVote()
@@ -30,7 +35,7 @@ class Movie extends Product
         $vote = ceil($this->vote_average / 2);
         $template = "<p>";
         for ($n = 1; $n <= 5; $n++) {
-            $template .= $n <= $vote ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-solid fa-star"></i>';
+            $template .= $n <= $vote ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-regular fa-star"></i>';
         }
         $template .= "</p>";
         return $template;
@@ -40,7 +45,7 @@ class Movie extends Product
     {
         $template = "<p>";
         foreach ($this->genres as $genre) {
-            $template .= $genre->name;
+            $template .= '<span>' . $genre->drawGenre() . ' - </span>';
         }
         $template .= "</p>";
         return $template;
@@ -48,49 +53,42 @@ class Movie extends Product
 
     public function printCard()
     {
-        $sconto = $this->setDiscount($this->title);
         $image = $this->poster_path;
         $title = strlen($this->title) > 28 ? substr($this->title, 0, 28) . '...' : $this->title;
         $content = substr($this->overview, 0, 100) . '...';
         $custom = $this->getVote();
         $genre = $this->formatGenres();
-        $price = $this->price;
         $quantity = $this->quantity;
+        $price = $this->price;
         include __DIR__ . '/../Views/card.php';
     }
+}
+$movieString = file_get_contents(__DIR__ . "/movie_db.json");
+$movieList = json_decode($movieString, true);
 
-    public static function fetchAll()
-    {
-        $movieString = file_get_contents(__DIR__ . "/movie_db.json");
-        $movieString = json_decode($movieString, true);
+$movies = [];
 
-        $genres = Genre::fetchAll();
-        $movies = [];
+foreach ($movieList as $item) {
+    $movieGenres = [];
+    $quantity = isset($item['quantity']) ? $item['quantity'] : 0;
 
-        foreach ($movieString as $item) {
-            $movieGenres = [];
-            foreach ($item["genre_ids"] as $genreId) {
-                foreach ($genres as $genre) {
-                    if ($genre->name === $genreId) {
-                        $movieGenres[] = $genre;
-                        break;
-                    }
-                }
-            }
-            $movies[] = new Movie(
-                $item['id'],
-                $item['title'],
-                $item['overview'],
-                $item['vote_average'],
-                $item['poster_path'],
-                $item['original_language'],
-                $movieGenres,
-                $item['quantity'],
-                $item['price']
-            );
-        }
-
-        return $movies;
+    for ($i = 0; $i < count($item['genre_ids']); $i++) {
+        // Assicurati di aver incluso o definito la classe Genre
+        $index = rand(0, count($genres) - 1);
+        $rand_genre = $genres[$index];
+        $movieGenres[] = $rand_genre;
     }
+
+    $movies[] = new Movie(
+        $item['id'],
+        $item['title'],
+        $item['overview'],
+        $item['vote_average'],
+        $item['poster_path'],
+        $item['original_language'],
+        $movieGenres,
+        $quantity,
+        $item['price'] // Aggiunto il prezzo dal tuo file JSON
+    );
 }
 ?>

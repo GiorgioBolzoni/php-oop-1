@@ -23,7 +23,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container text-center">
             <h1>OOP - Shop</h1>
         </div>
     </header>
